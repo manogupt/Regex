@@ -1,21 +1,20 @@
 package com.Bridgelabz;
-
 import java.util.Scanner;
 import java.util.regex.Pattern;
 
-public class RegexExpression 
-{
-         static boolean validate(String pattern, String text) {
-		
+public class RegexExpression {
+
+	static boolean validate(String pattern, String text) {
+
 		return Pattern.compile(pattern).matcher(text).matches();
 	}
 
 	public static void main(String[] args) {
 
-		String pattern = "^[a-zA-Z0-9]{8,}$";
+		String pattern = "^[A-Z]{1}[a-zA-Z0-9]{8,}$";
 
 		Scanner scanner = new Scanner(System.in);
-		System.out.println("Please Enter value =>");
+		System.out.print("Please Enter value:=");
 
 		String lastName = scanner.next();
 
@@ -27,4 +26,5 @@ public class RegexExpression
 			System.out.println("Not a valid ID");
 		}
 	}
+
 }
